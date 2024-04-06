@@ -95,9 +95,10 @@ int main(int argc, char* argv[]) try {
     TextStreamer text_streamer{std::move(detokenizer)};
 
     auto rt_info = tokenizer_model->get_rt_info();
+    int64_t SPECIAL_EOS_TOKEN;
 
     if (rt_info.count("eos_token_id") > 0) {
-        auto SPECIAL_EOS_TOKEN = rt_info["eos_token_id"];
+        SPECIAL_EOS_TOKEN = rt_info["eos_token_id"].as<int64_t>();;
     } else {
         throw std::runtime_error("EOS token ID not found in model's runtime information.");
     }
