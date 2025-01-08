@@ -106,6 +106,7 @@ def analyze_args(args):
     model_args['save_prepared_model'] = args.save_prepared_model
     model_args['num_beams'] = args.num_beams
     model_args['torch_compile_backend'] = args.torch_compile_backend
+    model_args['quantize'] = args.quantize
     model_args['torch_compile_dynamic'] = args.torch_compile_dynamic
     model_args['torch_compile_options'] = args.torch_compile_options
     model_args['torch_compile_input_module'] = args.torch_compile_input_module

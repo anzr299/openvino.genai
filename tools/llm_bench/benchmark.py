@@ -115,6 +115,12 @@ def get_argprser():
         help='Options for torch.compile() in JSON format',
     )
     parser.add_argument(
+        '--quantize',
+        default=False,
+        required=False,
+        help='Set this to True for quantizing pytorch FX model using NNCF.',
+    )
+    parser.add_argument(
         '--torch_compile_input_module',
         default=None,
         required=False,
