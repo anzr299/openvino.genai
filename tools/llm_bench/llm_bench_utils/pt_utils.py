@@ -310,7 +310,7 @@ def create_image_gen_model(model_path, device, **kwargs):
         backend = kwargs['torch_compile_backend']
         quantize = kwargs["quantize"]
         if(quantize):
-            with open('../../../calibration_data', 'rb') as f:
+            with open('./calibration_data', 'rb') as f:
                 unet_calibration_data = pickle.load(f)
             model_dict, configs_dict = export_models(pipe)
             text_encoder = model_dict['text_encoder']
