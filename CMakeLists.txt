@@ -1,4 +1,4 @@
-# Copyright (C) 2018-2024 Intel Corporation
+# Copyright (C) 2018-2025 Intel Corporation
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -30,7 +30,7 @@ if(UNIX AND NOT (APPLE OR ANDROID OR CYGWIN))
 endif()
 
 project(OpenVINOGenAI
-        VERSION 2025.0.0.0
+        VERSION 2025.1.0.0
         DESCRIPTION "OpenVINO GenAI"
         HOMEPAGE_URL "https://github.com/openvinotoolkit/openvino.genai"
         LANGUAGES CXX C)
@@ -60,6 +60,7 @@ if(NOT OpenVINODeveloperPackage_FOUND)
 endif()
 
 include(cmake/features.cmake)
+include(cmake/version.cmake)
 
 if(ENABLE_PYTHON)
     # the following two calls are required for cross-compilation

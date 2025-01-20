@@ -6,7 +6,7 @@ This example showcases inference of speech recognition Whisper Models. The appli
 
 The `--upgrade-strategy eager` option is needed to ensure `optimum-intel` is upgraded to the latest version.
 
-It's not required to install [../../export-requirements.txt](../../export requirements.txt) for deployment if the model has already been exported.
+It's not required to install [../../export-requirements.txt](../../export-requirements.txt) for deployment if the model has already been exported.
 
 ```sh
 pip install --upgrade-strategy eager -r ../../requirements.txt
@@ -31,7 +31,7 @@ Output:
 timestamps: [0, 2] text:  How are you doing today?
 ```
 
-See [SUPPORTED_MODELS.md](../../../src/docs/SUPPORTED_MODELS.md#whisper-models) for the list of supported models.
+See [SUPPORTED_MODELS.md](../../../SUPPORTED_MODELS.md#whisper-models) for the list of supported models.
 
 # Whisper pipeline usage
 
